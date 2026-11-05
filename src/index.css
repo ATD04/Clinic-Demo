@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/cairo";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Cairo Variable', 'Segoe UI', Tahoma, sans-serif;
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: #F7F9FB;
+    --foreground: #172B3A;
+    --card: #FFFFFF;
+    --card-foreground: #172B3A;
+    --popover: #FFFFFF;
+    --popover-foreground: #172B3A;
+    --primary: #0F766E;
+    --primary-foreground: #FFFFFF;
+    --secondary: #E7F3F0;
+    --secondary-foreground: #14283F;
+    --muted: #EEF2F6;
+    --muted-foreground: #64748B;
+    --accent: #E7F3F0;
+    --accent-foreground: #0F766E;
+    --destructive: #DC2626;
+    --border: #E3E8EF;
+    --input: #E3E8EF;
+    --ring: #0F766E;
+    --chart-1: #0F766E;
+    --chart-2: #14283F;
+    --chart-3: #5EEAD4;
+    --chart-4: #38BDF8;
+    --chart-5: #94A3B8;
+    --radius: 0.75rem;
+    --sidebar: #14283F;
+    --sidebar-foreground: #C9D6E2;
+    --sidebar-primary: #0F766E;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #1C3654;
+    --sidebar-accent-foreground: #FFFFFF;
+    --sidebar-border: #24405E;
+    --sidebar-ring: #0F766E;
+}
+
+.dark {
+    --background: #0D1B2A;
+    --foreground: #E7F3F0;
+    --card: #14283F;
+    --card-foreground: #E7F3F0;
+    --popover: #14283F;
+    --popover-foreground: #E7F3F0;
+    --primary: #14B8A6;
+    --primary-foreground: #0D1B2A;
+    --secondary: #1C3654;
+    --secondary-foreground: #E7F3F0;
+    --muted: #1C3654;
+    --muted-foreground: #94A3B8;
+    --accent: #1C3654;
+    --accent-foreground: #5EEAD4;
+    --destructive: #F87171;
+    --border: #24405E;
+    --input: #24405E;
+    --ring: #14B8A6;
+    --chart-1: #14B8A6;
+    --chart-2: #5EEAD4;
+    --chart-3: #38BDF8;
+    --chart-4: #94A3B8;
+    --chart-5: #E7F3F0;
+    --sidebar: #0D1B2A;
+    --sidebar-foreground: #C9D6E2;
+    --sidebar-primary: #14B8A6;
+    --sidebar-primary-foreground: #0D1B2A;
+    --sidebar-accent: #1C3654;
+    --sidebar-accent-foreground: #FFFFFF;
+    --sidebar-border: #1C3654;
+    --sidebar-ring: #14B8A6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
